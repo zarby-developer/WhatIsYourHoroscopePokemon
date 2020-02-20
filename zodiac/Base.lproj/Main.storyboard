@@ -1,24 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yc9-OV-SCG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="oEW-Lv-CBZ">
+            <objects>
+                <navigationController id="yc9-OV-SCG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o5l-xH-HF9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1iA-vC-4C2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWP-8h-RvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="90"/>
+        </scene>
+        <!--inicio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="inicio" id="BYZ-38-t0r" customClass="ViewController" customModule="zodiac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-SD-Sff">
+                                <rect key="frame" x="0.0" y="88" width="414" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es mi horóscopo chino?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKq-m7-B3D">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD7-F6-sI6">
+                                <rect key="frame" x="107" y="206" width="200" height="186"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="722" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-2u-kpC">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="186"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mr3-5L-skA">
+                                <rect key="frame" x="20" y="495" width="374" height="110"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="tXp-fM-OQE">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCp-Dk-Uf1">
+                                <rect key="frame" x="192" y="647" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8s-oV-ntl"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAB-O5-jdD">
+                                <rect key="frame" x="167" y="699" width="80" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-Qr-hax">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <state key="normal" title="Button" image="Pokeball-PNG-Image-79924-300x300"/>
+                                        <connections>
+                                            <segue destination="Zyg-Lw-dZu" kind="push" id="ngU-yk-SDE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jAB-O5-jdD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="5h6-C8-vwj"/>
+                            <constraint firstItem="aD7-F6-sI6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="6Cr-kV-Pwy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mr3-5L-skA" secondAttribute="trailing" constant="20" id="7Bt-4x-foN"/>
+                            <constraint firstItem="eCp-Dk-Uf1" firstAttribute="top" secondItem="mr3-5L-skA" secondAttribute="bottom" constant="42" id="7PH-Qs-gaF"/>
+                            <constraint firstItem="flZ-SD-Sff" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9UT-uM-Bbp"/>
+                            <constraint firstItem="jAB-O5-jdD" firstAttribute="top" secondItem="eCp-Dk-Uf1" secondAttribute="bottom" constant="22" id="BOz-mK-kS2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="flZ-SD-Sff" secondAttribute="bottom" constant="664" id="ETj-r5-4ns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aD7-F6-sI6" secondAttribute="trailing" constant="107" id="JoD-Y2-OPd"/>
+                            <constraint firstItem="flZ-SD-Sff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O8c-Ax-JyR"/>
+                            <constraint firstItem="eCp-Dk-Uf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="192" id="Uf3-va-sen"/>
+                            <constraint firstItem="flZ-SD-Sff" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ys1-m2-gXm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eCp-Dk-Uf1" secondAttribute="trailing" constant="192" id="aqO-yO-5re"/>
+                            <constraint firstItem="mr3-5L-skA" firstAttribute="top" secondItem="aD7-F6-sI6" secondAttribute="bottom" constant="103" id="bgE-ye-3xg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jAB-O5-jdD" secondAttribute="bottom" constant="83" id="fjW-Nt-RG9"/>
+                            <constraint firstItem="mr3-5L-skA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fxZ-pg-7Wi"/>
+                            <constraint firstItem="aD7-F6-sI6" firstAttribute="top" secondItem="flZ-SD-Sff" secondAttribute="bottom" constant="8" id="kUQ-QF-iz1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eCp-Dk-Uf1" secondAttribute="bottom" constant="185" id="o9a-7K-mPj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aD7-F6-sI6" secondAttribute="bottom" constant="470" id="qPo-pn-vNp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mr3-5L-skA" secondAttribute="bottom" constant="257" id="s5R-vB-h7D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAB-O5-jdD" secondAttribute="trailing" constant="167" id="soq-C9-A8K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0Me-d8-27t"/>
+                    <connections>
+                        <outlet property="birthdayDate" destination="tXp-fM-OQE" id="0oc-AQ-er7"/>
+                        <outlet property="nextButtom" destination="a4u-Qr-hax" id="SBH-UH-1bw"/>
+                        <outlet property="signalLabel" destination="NKq-m7-B3D" id="aJe-A2-EWC"/>
+                        <outlet property="zodiacImage" destination="5kY-2u-kpC" id="WCZ-WC-sO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="155" y="90"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="WR2-Rc-Bau">
+            <objects>
+                <viewController id="hHk-Nv-d5X" customClass="InfoViewController" customModule="zodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5gg-eT-wOc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szB-mZ-Njq">
+                                <rect key="frame" x="118" y="88" width="178" height="162"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G-tNcWgj_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="8rl-fk-g6n">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="162"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9n-EG-N9h">
+                                <rect key="frame" x="20" y="323" width="374" height="346"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDR-Qh-hGT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="346"/>
+                                        <string key="text">
+  
+El horóscopo chino Perro simboliza la amistad, la justicia y la fidelidad. El Perro es el undécimo animal del zodíaco chino y uno de los más queridos. Sensible, generoso y de gran corazón, siempre está dispuesto a ayudar incondicionalmente a los demás.
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="26s-gs-cgo" firstAttribute="bottom" secondItem="szB-mZ-Njq" secondAttribute="bottom" constant="563" id="5yT-NZ-1Bw"/>
+                            <constraint firstItem="26s-gs-cgo" firstAttribute="trailing" secondItem="szB-mZ-Njq" secondAttribute="trailing" constant="118" id="BHK-s2-iRh"/>
+                            <constraint firstItem="26s-gs-cgo" firstAttribute="trailing" secondItem="c9n-EG-N9h" secondAttribute="trailing" constant="20" id="Cja-kG-SrQ"/>
+                            <constraint firstItem="szB-mZ-Njq" firstAttribute="top" secondItem="26s-gs-cgo" secondAttribute="top" id="HgF-Ix-Ybm"/>
+                            <constraint firstItem="c9n-EG-N9h" firstAttribute="top" secondItem="szB-mZ-Njq" secondAttribute="bottom" constant="73" id="IeJ-ky-kew"/>
+                            <constraint firstItem="c9n-EG-N9h" firstAttribute="leading" secondItem="26s-gs-cgo" secondAttribute="leading" constant="20" id="S3V-XR-OUd"/>
+                            <constraint firstItem="26s-gs-cgo" firstAttribute="bottom" secondItem="c9n-EG-N9h" secondAttribute="bottom" constant="144" id="moS-nj-mOD"/>
+                            <constraint firstItem="szB-mZ-Njq" firstAttribute="leading" secondItem="26s-gs-cgo" secondAttribute="leading" constant="118" id="u9J-7n-RKO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="26s-gs-cgo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="law-aG-6gR"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="nDR-Qh-hGT" id="XkO-Pw-Uye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zqk-4E-6zI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2196" y="414"/>
+        </scene>
+        <!--Compatibilidad-->
+        <scene sceneID="Kui-Tp-PmQ">
+            <objects>
+                <viewController id="X1s-9v-9ZP" customClass="MatchViewController" customModule="zodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pBE-jL-H3a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Love_Ball_-_Pokemon_HeartGold_and_SoulSilver" translatesAutoresizingMaskIntoConstraints="NO" id="U72-zL-Fpx">
+                                <rect key="frame" x="160" y="264" width="94" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pm0077_00_ponyta_256.ktx" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-Lp-rih">
+                                <rect key="frame" x="138" y="124" width="138" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Torracat" translatesAutoresizingMaskIntoConstraints="NO" id="8kc-HD-5rK">
+                                <rect key="frame" x="138" y="348" width="138" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxv-GC-9s0">
+                                <rect key="frame" x="87" y="728" width="240" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iV-zS-iHA">
+                                <rect key="frame" x="87" y="512" width="240" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Encontrar el amor es algo que a unas personas les puede llevar muy poco tiempo y a otras toda una vida. A veces se busca sin encontrar y otras se encuentra sin buscar. Pero para facilitar esta aventura, conocer la compatibilidad del horóscopo chino hará que podamos tener más posibilidades de acertar con nuestra pareja si tiene un signo compatible con el nuestro</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eres compatible con &quot;El caballo&quot; y &quot;El tigre&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-NV-JPZ">
+                                <rect key="frame" x="40" y="483" width="335" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FBy-9d-CSg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Compatibilidad" id="MMp-j9-GHD"/>
+                    <connections>
+                        <outlet property="firstImage" destination="pk4-Lp-rih" id="uOo-fP-U8m"/>
+                        <outlet property="matchLabel" destination="9Xx-NV-JPZ" id="89O-Tl-6NH"/>
+                        <outlet property="secondImage" destination="8kc-HD-5rK" id="hLq-UK-IhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pa-dz-Ffa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="-234.375"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Sy4-Bq-7Wc">
+            <objects>
+                <tabBarController id="Zyg-Lw-dZu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cmM-0m-MKl"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kor-Go-brg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X1s-9v-9ZP" kind="relationship" relationship="viewControllers" id="EGo-pZ-3ba"/>
+                        <segue destination="hHk-Nv-d5X" kind="relationship" relationship="viewControllers" id="pQd-sM-cJb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUX-ux-V4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="722" width="201" height="225"/>
+        <image name="G-tNcWgj_400x400" width="400" height="400"/>
+        <image name="Love_Ball_-_Pokemon_HeartGold_and_SoulSilver" width="892" height="880"/>
+        <image name="Pokeball-PNG-Image-79924-300x300" width="300" height="300"/>
+        <image name="Torracat" width="1463" height="1350"/>
+        <image name="pm0077_00_ponyta_256.ktx" width="256" height="256"/>
+    </resources>
 </document>

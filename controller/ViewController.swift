@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     //MARK: outlets
+    var image : UIImage!
+    var text : String!
     @IBOutlet weak var signalLabel: UILabel!
     @IBOutlet weak var zodiacImage: UIImageView!
     @IBOutlet weak var birthdayDate: UIDatePicker!
