@@ -9,15 +9,15 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    var infoText : String!
+    var infoText : ZodiacAnimals?
     @IBOutlet weak var infoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoLabel.text = infoText
+        infoLabel.text = infoText?.zodiacInfo
         // Do any additional setup after loading the view.
     }
     
-
+  
     /*
     // MARK: - Navigation
 

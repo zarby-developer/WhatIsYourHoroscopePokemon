@@ -7,11 +7,11 @@
 //
 import UIKit
 import Foundation
-struct Zodiac {
-    let name : String
-    let image : String
-    let info : String
+struct ZodiacDate {
     
+    let type : ZodiacAnimals
+    let dateFrom: Date
+    let dateTo: Date
 }
 enum ZodiacAnimals{
     case rabbit
@@ -75,7 +75,32 @@ enum ZodiacAnimals{
         case .monkey : return UIImage(named:"chimchar")!
             
         }
+        
     }
 }
+
+    func generateDate (date: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let convertToDate = formatter.date(from: date)
+        return convertToDate!
+        
+    }
+    
+    
+    
+    let datesArray = [
+        ZodiacDate(type: ZodiacAnimals.snake,
+                   dateFrom: generateDate(date: "26-01-1990"),
+                   dateTo: generateDate(date: "26-01-1990"))
+    
+    ,ZodiacDate(type: ZodiacAnimals.hourse,dateFrom: generateDate(date: "27-01-1990"), dateTo: generateDate(date: "14-02-1991")),ZodiacDate(type:ZodiacAnimals.sheep, dateFrom: generateDate(date: "15-02-1991"), dateTo: generateDate(date: "03-02-1992")),ZodiacDate(type:ZodiacAnimals.monkey, dateFrom: generateDate(date: "04-02-1992"), dateTo: generateDate(date: "22-01-1993")),ZodiacDate(type:ZodiacAnimals.rooster, dateFrom: generateDate(date: "23-01-1993"), dateTo: generateDate(date: "09-02-1994")),ZodiacDate(type:ZodiacAnimals.dog, dateFrom: generateDate(date: "10-02-1994"), dateTo: generateDate(date: "30-01-1995")),ZodiacDate(type: ZodiacAnimals.pig,  dateFrom: generateDate(date: "31-01-1995"), dateTo: generateDate(date: "18-02-1996")),ZodiacDate(type: ZodiacAnimals.rat, dateFrom: generateDate(date: "19/02/1996"), dateTo: generateDate(date:"07/02/1997")),ZodiacDate(type:ZodiacAnimals.ox, dateFrom: generateDate(date: "08-02-1997"), dateTo: generateDate(date: "27-01-1998")), ZodiacDate(type: ZodiacAnimals.tiger, dateFrom: generateDate(date: "28-01-1998"), dateTo: generateDate(date: "15-02-1999")),ZodiacDate(type: ZodiacAnimals.rabbit, dateFrom: generateDate(date: "16-02-1999"), dateTo: generateDate(date: "04-02-2000")),ZodiacDate(type:ZodiacAnimals.dragon, dateFrom: generateDate(date: "05-02-2000"), dateTo: generateDate(date: "23-01-2001"))
+    
+    ]
+    
+    
+    
+    
+//}
 
 

@@ -55,6 +55,7 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="tXp-fM-OQE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
+                                        <locale key="locale" localeIdentifier="es_ES"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -72,7 +73,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" title="Button" image="Pokeball-PNG-Image-79924-300x300"/>
                                         <connections>
-                                            <segue destination="Zyg-Lw-dZu" kind="push" id="ngU-yk-SDE"/>
+                                            <action selector="navegateToNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EZX-qk-2u6"/>
+                                            <segue destination="Zyg-Lw-dZu" kind="push" identifier="segue1" id="ngU-yk-SDE"/>
                                         </connections>
                                     </button>
                                 </subviews>
